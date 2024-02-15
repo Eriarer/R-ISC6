@@ -1,3 +1,4 @@
+n <- 10 ** 1
 # Bubble Sort
 bubble_sort <- function(x, ascending = TRUE) {
   n <- length(x)
@@ -142,18 +143,16 @@ selection_sort <- function(x, ascending = TRUE) {
   x
 }
 
-n <- 10 ** 5
-
 bubbleTime <- numeric()
 selectionTime <- numeric()
 quickSortTime <- numeric()
 mergeTime <- numeric()
 insertionTime <- numeric()
 
-for (i in 1:10) {
+for (i in 1:100) {
+  print(paste("Iteracion: ", i))
   x <- runif(n)
 
-  print("Bubble Sort")
   #Bubble Sort
   bubbleStart <- Sys.time()
   bubble_res <- bubble_sort(x)
@@ -161,7 +160,6 @@ for (i in 1:10) {
 
   bubbleTime <- c(bubbleTime, as.numeric(bubbleEnd - bubbleStart))
 
-  print("Selection Sort")
   #Selection Sort
   selectionStart <- Sys.time()
   selection_res <- selection_sort(x)
@@ -169,7 +167,6 @@ for (i in 1:10) {
 
   selectionTime <- c(selectionTime, as.numeric(selectionEnd - selectionStart))
 
-  print("Quick Sort")
   #Quick Sort
   quickSortStart <- Sys.time()
   quickSort_res <- quickSort(x)
@@ -177,7 +174,6 @@ for (i in 1:10) {
 
   quickSortTime <- c(quickSortTime, as.numeric(quickSortEnd - quickSortStart))
 
-  print("Merge Sort")
   #Merge sort
   mergeStart <- Sys.time()
   mergesort_res <- mmergesort(x)
@@ -185,7 +181,6 @@ for (i in 1:10) {
 
   mergeTime <- c(mergeTime, as.numeric(mergeEnd - mergeStart))
 
-  print("Insertion Sort")
   #Insertion Sort
   insertionStart <- Sys.time()
   insertion_res <- insertion_sort(x)
