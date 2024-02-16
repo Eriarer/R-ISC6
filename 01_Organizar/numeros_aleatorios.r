@@ -1,4 +1,5 @@
-n <- 10 ** 1
+n <- 10 ** 4
+vueltas <- 100
 # Bubble Sort
 bubble_sort <- function(x, ascending = TRUE) {
   n <- length(x)
@@ -149,7 +150,7 @@ quickSortTime <- numeric()
 mergeTime <- numeric()
 insertionTime <- numeric()
 
-for (i in 1:100) {
+for (i in 1:vueltas) {
   print(paste("Iteracion: ", i))
   x <- runif(n)
 
@@ -194,13 +195,13 @@ t <- list("Bubble Sort" = bubbleTime,
     "Quick Sort" = quickSortTime,
     "Merge sort" = mergeTime,
     "Insertion sort" = insertionTime)
-
-sort(sapply(t, mean))
-sort(sapply(t, sd))
+# Recrear la t con la lista 
+# ordenada por la media
+sapply(t, mean)
 
 boxplot(t, main = "Tiempos de ejecucion de algoritmos",
           xlab = "Algoritmo",
-          ylab = "Tiempo (min)",
+          ylab = "Tiempo (s)",
           names = c("Bubble", "Selection", "Quick", "Merge", "Insertion"),
           col = c("red", "blue", "green", "yellow", "purple")
           )
