@@ -151,7 +151,7 @@ dev.off()
 # Dados de efron
 dado1<-dado(c(4,4,4,4,0,0),"red")
 dados2<-dado(c(3,3,3,3,3,3),"blue")
-dado3<-dado(c(6,6,6,2,2,2),"green")
+dado3<-dado(c(6,6,2,2,2,2),"green")
 dado4<-dado(c(5,5,5,5,1,1),"yellow")
 
 r1vs2<-character()
