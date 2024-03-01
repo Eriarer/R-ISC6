@@ -63,6 +63,7 @@ barplot(t1vs3,main="Red vs Green",col=names(t1vs3),ylab="Frecuencia",xlab="Ganad
         names.arg=names(t1vs3))
 barplot(t2vs3,main="Blue vs Green",col=names(t2vs3),ylab="Frecuencia",xlab="Ganador p/ tirada",
         names.arg=names(t2vs3))
+title("IMAGEN 1", outer = TRUE, line = -1.2)
 dev.off()
 
 # Dados no transitivos
@@ -95,6 +96,7 @@ barplot(t1vs3,main="Red vs Green",col=names(t1vs3),ylab="Frecuencia",xlab="Ganad
         names.arg=names(t1vs3))
 barplot(t2vs3,main="Blue vs Green",col=names(t2vs3),ylab="Frecuencia",xlab="Ganador p/ tirada",
         names.arg=names(t2vs3))
+title("IMAGEN 2", outer = TRUE, line = -1.2)
 dev.off()
 
 
@@ -145,6 +147,7 @@ barplot(t1vs3,main="Red vs Green",col=names(t1vs3),ylab="Frecuencia",xlab="Ganad
         names.arg=names(t1vs3))
 barplot(t2vs3,main="Blue vs Green",col=names(t2vs3),ylab="Frecuencia",xlab="Ganador p/ tirada",
         names.arg=names(t2vs3))
+title("IMAGEN 3", outer = TRUE, line = -1.2)
 #cerrar el archivo pdf
 dev.off()
 
@@ -195,6 +198,7 @@ barplot(t2vs4,main="Blue vs Yellow",col=names(t2vs4),ylab="Frecuencia",xlab="Gan
         names.arg=names(t2vs4))
 barplot(t3vs4,main="Green vs Yellow",col=names(t3vs4),ylab="Frecuencia",xlab="Ganador p/ tirada",
         names.arg=names(t3vs4))
+title("IMAGEN 4", outer = TRUE, line = -1.2)
 dev.off()
 
 # -----
