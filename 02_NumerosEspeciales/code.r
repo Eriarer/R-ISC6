@@ -67,9 +67,9 @@ barplot(t2vs3, main = "Blue vs Green", col = names(t2vs3), ylab = "Frecuencia", 
 dev.off()
 
 # Dados no transitivos
-dado1 <- dado(c(2, 2, 4, 4, 9, 9), "red")
-dado2 <- dado(c(1, 1, 6, 6, 8, 8), "blue")
-dado3 <- dado(c(3, 3, 5, 5, 7, 7), "green")
+dado1 <- dado(c(1, 1, 5, 5, 9, 9), "red")
+dado2 <- dado(c(2, 2, 6, 6, 7, 7), "blue")
+dado3 <- dado(c(3, 3, 4, 4, 8, 8), "green")
 
 r1vs2 <- character()
 r1vs3 <- character()
@@ -98,28 +98,15 @@ barplot(t2vs3, main = "Blue vs Green", col = names(t2vs3), ylab = "Frecuencia", 
         names.arg = names(t2vs3))
 dev.off()
 
-
-dado1 <- dado(c(1, 1, 5, 5, 9, 9), "red")
-dado2 <- dado(c(2, 2, 6, 6, 7, 7), "blue")
-dado3 <- dado(c(3, 3, 4, 4, 8, 8), "green")
-
-# Imprime el dado
-#print(dado1)
-
-d1 <- tirar(dado1, 2)
-d2 <- tirar(dado2, 2)
-d3 <- tirar(dado3, 2)
-
-
 # Ver que dado es mayor
 r1vs2 <- character()
 r1vs3 <- character()
 r2vs3 <- character()
 
 for (i in 1:ciclos) {
-  d1 <- tirar(dado1)
-  d2 <- tirar(dado2)
-  d3 <- tirar(dado3)
+  d1 <- tirar(dado1, 2)
+  d2 <- tirar(dado2, 2)
+  d3 <- tirar(dado3, 2)
   r1vs2 <- c(r1vs2, gana(d1, d2))
   r1vs3 <- c(r1vs3, gana(d1, d3))
   r2vs3 <- c(r2vs3, gana(d2, d3))
